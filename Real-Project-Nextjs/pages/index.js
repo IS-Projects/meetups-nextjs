@@ -29,6 +29,8 @@ export async function getStaticProps() {
     props: {
       meetups: DUMMY_MEETUPS,
     },
+    // number of seconds data changes so that it 'revalidates'
+    revalidate: 1,
   };
 }
 
