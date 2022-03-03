@@ -1,9 +1,18 @@
 import { MongoClient } from "mongodb";
+import MetaHead from "../components/layout/MetaHead";
 
 import MeetupList from "../components/meetups/MeetupList";
 
 function HomePage(props) {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <>
+      <MetaHead
+        title="React Meetups"
+        content="Browse a huge list of highly active React meetups!"
+      />
+      <MeetupList meetups={props.meetups} />
+    </>
+  );
 }
 
 // Server Side Rendering is better for pages where data is constantly changing
